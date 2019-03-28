@@ -3,6 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// For Network
+import { HttpClientModule } from "@angular/common/http";
+import { NewsService } from "./news.service"
+
+// For Ng Material
+import { MatButtonModule, MatMenuModule, MatToolbarModule, MatCardModule } from "@angular/material";
+import { MatIconModule, MatSidenavModule, MatListModule } from "@angular/material";
+
 
 @NgModule({
   declarations: [
@@ -10,9 +20,18 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule, 
+    MatSidenavModule, 
+    MatListModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule, NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
