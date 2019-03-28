@@ -18,7 +18,7 @@ export class NewsService {
     return this.client.get(this.apiURL + 'top-headlines?sources=techcrunch&apiKey=' + this.apiKey);
   }
 
-  getActiclesById(source: string) {
+  getActiclesById(source: string) { 
     return this.client.get(this.apiURL + 'top-headlines?sources=' + source + '&apiKey=' + this.apiKey);
   }
 }
